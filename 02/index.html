@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="#" class="brand">UC2</a>
+                <ul class="nav-links">                    
+                    <li><a href="#">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="#">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Utilizando <code>console.log</code>, <code>innerText</code> e <code>prompt</code> para saída e entrada
+                de dados.
+            </h1>
+            <h2>
+                Ensinar os alunos a exibir dados no console, interagir com o conteúdo da página usando
+                <code>innerText</code>
+                e solicitar entradas de dados com o <code>prompt</code>, aplicando cada um em exemplos práticos.
+            </h2>
+            <hr>
+        </div>        
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Introdução e Objetivos</h3>
+            <ul>
+                <li>
+                    <strong>Introduzir os conceitos de entrada e saída de dados</strong>
+                    no contexto do JavaScript para manipulação do DOM e desenvolvimento interativo.
+                </li>
+                <li>
+                    <strong>Explorar os comandos principais para exibir informações</strong>
+                    e capturar entradas, focando em três métodos: console.log, innerText e prompt.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Saída de Dados</h3>
+            <ol>
+                <li><code>console.log</code></li>
+                <ul>
+                    <li>Permite visualizar informações no console do navegador, útil para depuração e visualização de dados</li>
+                    <li>Sintaxe: <code>console.log("Mensagem");</code></li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+console.log("Olá, mundo!");  // Exibe "Olá, mundo!" no console
+let nome = "Aecio";
+console.log("Bem-vindo, " + nome);  // Exibe "Bem-vindo, Aecio" no console                                
+                            </code></pre>
+                        </div>
+
+                    </li>
+                </ul>
+                <li><code>innerText</code></li>
+                <ul>
+                    <li>Modifica o conteúdo de texto de um elemento HTML, alterando o que o usuário vê na página.</li>
+                    <li>Sintaxe: <code>document.getElementById("idDoElemento").innerText = "Novo texto";</code></li>
+                    <li>Exemplo</li>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+&ltdiv id="mensagem"&gt&lt/div&gt
+&ltscript&gt
+  let nome = "Carlos";
+  document.getElementById("mensagem").innerText = "Bem-vindo, " + nome + "!";
+&lt/script&gt
+
+                        </code></pre>
+                    </div>
+                </ul>
+            </ol>
+
+            <h3>Entrada de Dados</h3>
+            <ol>
+                <li><code>prompt</code></li>
+                <ul>
+                    <li>Solicita ao usuário uma entrada de dados por meio de uma janela pop-up.</li>
+                    <li>Sintaxe: <code>let variavel = prompt("Digite seu nome:");</code></li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let idade = prompt("Qual a sua idade?");
+console.log("Idade do usuário: " + idade);  // Exibe a idade informada no console
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+
+                <li>Campo <code>input</code> HTML</li>
+                <ul>
+                    <li>Permite que o usuário insira dados diretamente em um campo de texto na página.</li>
+                    <li>Requer o uso de um botão para acionar o código que processa a entrada.</li>
+                    <li>
+                        Exemplo
+
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+&lt!DOCTYPE html&gt
+&lthtml lang="pt-BR"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gtEntrada de Dados com Input&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+    &lth1&gtEntrada de Dados com Input e Botão&lt/h1&gt
+
+    &lt!-- Campo de entrada de dados e botão para enviar --&gt
+    &ltlabel for="nomeInput"&gtDigite seu nome:&lt/label&gt
+    &ltinput type="text" id="nomeInput" placeholder="Digite seu nome aqui"&gt
+    &ltbutton onclick="exibirNome()"&gtEnviar&lt/button&gt
+
+    &lt!-- Parágrafo onde o nome será exibido --&gt
+    &ltp id="saida"&gt&lt/p&gt
+
+    &ltscript&gt
+    function exibirNome() {
+        // Obtém o valor do campo de entrada de dados
+        let nome = document.getElementById("nomeInput").value;
+
+        // Exibe o nome no parágrafo com id 'saida'
+        document.getElementById("saida").innerText = "Olá, " + nome + "!";
+    }
+    &lt/script&gt
+&lt/body&gt
+&lt/html&gt
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </ol>
+            <hr>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Criar uma página onde:</h4>
+            <ul>
+                <li>O usuário é solicitado a informar seu nome e sua cor favorita usando <code>prompt</code>.</li>
+                <li>A página então exibe uma mensagem de saudação com o nome e altera o fundo da página para a cor favorita do usuário.</li>
+            </ul>
+            <p>Adicione o link da atividade <a href="#">aqui</a></p>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Crie uma pequena aplicação que:</h4>
+            <ul>
+                <li>Solicite ao usuário que insira seu nome em um campo de <code>input</code> HTML.</li>
+                <li>Solicite ao usuário que insira sua idade utilizando <code>prompt</code>.</li>
+                <li>Ao clicar no botão "Mostrar informações", exiba uma saudação personalizada no formato:
+
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+Olá, [Nome]! Você tem [Idade] anos.
+                        </code></pre>
+                    </div>
+                </li>
+            </ul>
+            <p>Adicione o link da atividade <a href="#">aqui</a></p>
+            <hr>
+        </div>
+    </section>
+</body>
+
+</html>
