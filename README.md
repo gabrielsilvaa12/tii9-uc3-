@@ -1,8 +1,7 @@
 # UC3: Codificar Front-End de aplicações web.
 CARGA HORÁRIA: 96 HORAS
 
-## Índice de atividades
-[Aqui](https://aeciobrito.github.io/tii09-uc3/)
+## [Índice de atividades](https://aeciobrito.github.io/tii09-uc3/)
 
 ## Indicadores
 
