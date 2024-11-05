@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">                    
+                    <li><a href="../02/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../04/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Variáveis e Tipos de Dados.</h1>
+            <h2>
+                Declaração de variáveis, tipos de dados primitivos e operações básicas em JavaScript. <br>
+                Objetivo: Ensinar os conceitos fundamentais de variáveis e tipos de dados em JavaScript, além de explorar operações básicas como soma, 
+                concatenação e comparação entre valores.
+            </h2>
+            <hr>
+        </div>        
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Introdução e Objetivos</h3>
+            <ul>
+                <li>
+                    Explicar <strong>o que são variáveis e por que elas são essenciais</strong> para armazenar e manipular dados.
+                </li>
+                <li>
+                    Introduzir <strong>tipos de dados primitivos</strong> e <strong>operações básicas</strong>.
+                </li>
+                <li>Preparar os alunos para manipular variáveis de forma prática, aplicando-as em operações comuns no desenvolvimento web.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conceitos e Explicações</h3>
+            <ol>
+                <li><code>let</code>, <code>const</code>, e <code>var</code>: Explicação de cada palavra-chave.</li>
+                <ul>
+                    <li><code>let</code>: Para variáveis que podem ser alteradas.</li>
+                    <li><code>const</code>: Para variáveis cujo valor não muda.</li>
+                    <li><code>var</code>: Antiga forma de declarar variáveis, geralmente evitada em projetos modernos.</li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let idade = 25;
+const nome = "Aecio";
+var cidade = "São Paulo";
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>                
+            </ol>
+
+            <h3>Tipos de Dados Primitivos</h3>
+            <ol>
+                <li>Número: Inclui inteiros e decimais.</li>
+                <ul>
+                    <li>Exemplo: let preco = 19.99;</li>
+                </ul>
+                <li>String: Conjunto de caracteres, como textos.</li>
+                <ul>
+                    <li>Exemplo: let saudacao = "Olá, mundo!";</li>
+                </ul>
+                <li>Booleano: Valores lógicos (true ou false).</li>
+                <ul>
+                    <li>Exemplo: let estaAtivo = true;</li>
+                </ul>
+
+                <li>Undefined e Null:</li>
+                <ul>
+                    <li>Undefined representa uma variável sem valor atribuído.</li>
+                    <li>Null é intencionalmente vazia.</li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let valor;  // Undefined
+let vazio = null;  // Null                                
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </ol>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">            
+            <h3>Operações Básicas</h3>
+            <ol>
+                <li>Aritméticas (soma, subtração, multiplicação, divisão):</li>
+                <ul>
+                    <li>Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let a = 10;
+let b = 5;
+let soma = a + b;  // Resultado: 15
+let subtracao = a - b;  // Resultado: 5                                                             
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+
+                <li>Concatenação de Strings:</li>
+                <ul>
+                    <li>Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let nome = "Maria";
+let saudacao = "Olá, " + nome + "!";  // Resultado: "Olá, Maria!"
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+
+                <li>Comparação (igualdade, desigualdade):</li>
+                <ul>
+                    <li>Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let x = 10;
+let y = "10";
+console.log(x == y);  // true (compara o valor, não o tipo)
+console.log(x === y);  // false (compara o valor e o tipo)                                
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+
+            </ol>
+            <hr>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Criar uma página onde:</h4>
+            <ul>
+                <li>O usuário fornece um numero usando <code>prompt</code>.</li>
+                <li>Exibir a tabuada de soma, subtração, multiplicação e divisão desse números no console ou na página.</li>
+            </ul>
+            <p>Adicione o link da atividade <a href="atividade/atividade1.html">aqui</a></p>
+            <hr>
+        </div>
+    </section>    
+</body>
+
+</html>
