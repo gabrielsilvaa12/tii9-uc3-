@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../03/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../05/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Operadores e Expressões em JavaScript</h1>
+            <h2>
+                Nesta aula, os alunos aprenderão sobre diferentes operadores e
+                como usá-los para criar expressões em JavaScript.
+            </h2>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Introdução e Objetivos</h3>
+            <ul>
+                <li>
+                    Entender e utilizar operadores aritméticos, lógicos, comparativos e ternário.
+                </li>
+                <li>
+                    Praticar a criação de expressões e condições usando diferentes operadores.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conceitos e Explicações</h3>
+            <ol>
+                <li>Os operadores aritméticos permitem realizar operações matemáticas básicas.</li>
+                <ul>
+                    <li>Adição (+): soma de dois valores.</li>
+                    <li>Subtração (-): subtrai um valor do outro.</li>
+                    <li>Multiplicação (*): multiplica dois valores.</li>
+                    <li>Divisão (/): divide um valor pelo outro.</li>
+                    <li>Módulo (%): retorna o resto da divisão.</li>
+                    <li>Incremento (++) e Decremento (--): incrementa ou decrementa o valor de uma variável em 1.</li>
+                    <li>
+                        Exemplo de Operadores Aritméticos
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let a = 10;
+let b = 3;
+
+console.log("Adição: " + (a + b));        // Resultado: 13
+console.log("Subtração: " + (a - b));     // Resultado: 7
+console.log("Multiplicação: " + (a * b)); // Resultado: 30
+console.log("Divisão: " + (a / b));       // Resultado: 3.3333...
+console.log("Módulo: " + (a % b));        // Resultado: 1
+a++; // Incrementa a
+console.log("Incremento de a: " + a);     // Resultado: 11
+b--; // Decrementa b
+console.log("Decremento de b: " + b);     // Resultado: 2
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </ol>
+
+            <h3>Operadores Comparativos</h3>
+            <ol>
+                <li>Os operadores comparativos avaliam a relação entre dois valores, resultando em <code>true</code> ou
+                    <code>false</code>.</li>
+                <ul>
+                    <li>Igualdade (==) e Identidade (===): verifica se os valores são iguais. A identidade compara
+                        também o tipo de dado.</li>
+                    <li>Diferente (!=) e Estritamente Diferente (!==): verifica se os valores são diferentes. O
+                        estritamente diferente compara o tipo de dado.</li>
+                    <li>Maior que (>) e Maior ou Igual (>=): verifica se um valor é maior ou igual a outro.</li>
+                    <li>Menor que (<) e Menor ou Igual (<=): verifica se um valor é menor ou igual a outro.</li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let x = 5;
+let y = "5";
+
+console.log(x == y);   // true - valores iguais, mas tipos diferentes
+console.log(x === y);  // false - valores iguais, mas tipos diferentes
+console.log(x != y);   // false - valores iguais
+console.log(x !== y);  // true - tipos diferentes
+console.log(x > 3);    // true - x é maior que 3
+console.log(x <= 5);   // true - x é igual a 5
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </ol>
+
+            <h3>Operadores Lógicos</h3>
+            <ol>
+                <li>Os operadores lógicos são utilizados para combinar condições.</li>
+                <ul>
+                    <li>E (&&): verdadeiro se todas as condições forem verdadeiras.</li>
+                    <li>Ou (||): verdadeiro se ao menos uma condição for verdadeira.</li>
+                    <li>Não (!): inverte o valor lógico (se true vira false e vice-versa).</li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let idade = 20;
+let temCarteira = true;
+
+console.log(idade >= 18 && temCarteira);  // true - idade maior ou igual a 18 e tem carteira
+console.log(idade < 18 || temCarteira);   // true - ao menos uma condição é verdadeira
+console.log(!temCarteira);                // false - inverte o valor de temCarteira
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </ol>
+
+            <h3>Operador Ternário</h3>
+            <ol>
+                <li>O operador ternário permite escrever uma condição simplificada.</li>
+                <ul>
+                    <li>Sintaxe: condicao ? valorSeVerdadeiro : valorSeFalso</li>
+                    <li>
+                        Exemplo
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let nota = 7.5;
+let resultado = nota >= 6 ? "Aprovado" : "Reprovado";
+console.log(resultado);  // "Aprovado" se nota >= 6, caso contrário "Reprovado"                                
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </ol>
+            <hr>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Criar uma página onde:</h4>
+            <ul>
+                <li>O usuário insere a idade e sua altura usando prompt.</li>
+                <li>Use operadores comparativos e lógicos para verificar se:</li>
+                <ul>
+                    <li>A idade é maior ou igual a 18 e a altura é maior ou igual a 1.60.</li>
+                </ul>
+                <li>Exiba no console.log se a pessoa pode ou não entrar em uma atração (ou “Passeio” ou “Montanha Russa”).</li>
+                <li>Use o operador ternário para atribuir uma mensagem de "Aprovado" ou "Reprovado" com base na condição.</li>
+            </ul>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+            <hr>
+        </div>
+    </section>
+</body>
+
+</html>
