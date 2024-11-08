@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="range" id="velocidade" min="0" max="220">
+    <br>
+    <button onclick="calcularMulta()">Calcular Multa</button>    
+    <div id="mensagem"></div>
+
+    <script>
+        function calcularMulta() {
+            let velocidadeVeiculo = document.getElementById("velocidade").value;
+            let mensagem = velocidadeVeiculo > 80 ? 
+                "Multado a " + velocidadeVeiculo + "kh/h" : "Velocidade atual: " + velocidadeVeiculo;
+            
+            document.getElementById("mensagem").innerText = mensagem;
+        }
+        /*
+        Crie um script com um slider de input que vai de 0 a 220
+        para verificar a velocidade de um veículo.
+        Se o veículo estiver a mais de 80km/h, exiba a mensagem "Multado!"
+        */
+    </script>
+</body>
+</html>
