@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../05/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../07/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Laços de Repetição em JavaScript</h1>
+            <h2>
+                Nessa aula, o foco é ensinar o conceito de iteração e como realizar repetições 
+                no código de maneira eficiente usando os laços <code>for</code>, <code>while</code> e <code>do...while</code>.
+            </h2>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivo da Aula</h3>
+            <ul>
+                <li>Compreender o conceito de laços de repetição.</li>
+                <li>Aprender a utilizar os laços <code>for</code>, <code>while</code> e <code>do...while</code> para executar blocos de código repetidamente.</li>
+                <li>Identificar o laço adequado para diferentes situações.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>Introdução aos Laços de Repetição</h4>
+                    <p>Laços de repetição são usados para executar um bloco de código várias vezes. Dependendo da estrutura de laço utilizada, 
+                        o número de repetições pode ser baseado em uma condição ou uma contagem específica.</p>                    
+                </li>
+                <li>
+                    <h4>Estrutura de Repetição <code>for</code></h4>
+                    <p>O laço <code>for</code> é ideal para quando sabemos quantas vezes o bloco de código precisa ser repetido. 
+                        A estrutura é composta por três partes: inicialização, condição e incremento.</p>
+                    <ul>
+                        <li>
+                            Sintaxe e Exemplo
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+for (let i = 1; i <= 5; i++) {
+    console.log("Contagem: " + i);
+}
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Estrutura de Repetição <code>while</code></h4>
+                    <p>O laço <code>while</code> é usado quando não sabemos previamente quantas vezes o bloco será repetido, 
+                        mas sabemos uma condição que precisa ser verdadeira para continuar repetindo.</p>
+                    <ul>
+                        <li>
+                            Sintaxe e Exemplo
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let contador = 1;
+
+while (contador <= 5) {
+    console.log("Contagem: " + contador);
+    contador++;
+}
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Estrutura de Repetição <code>do...while</code></h4>
+                    <p>O laço <code>do...while</code> funciona de forma semelhante ao <code>while</code>, mas garante que 
+                        o bloco de código seja executado pelo menos uma vez antes de verificar a condição.</p>
+                    <ul>
+                        <li>
+                            Sintaxe e Exemplo
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let numero = 1;
+
+do {
+    console.log("Número: " + numero);
+    numero++;
+} while (numero <= 5);
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Neste exemplo, o bloco de código é executado uma vez antes de verificar se <code>numero <= 5</code>, o que garante que o valor inicial é exibido ao menos uma vez.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Exemplos Práticos</h3>
+            <ol>
+                <li>
+                    <h4>Contando de 1 a 10 com <code>for</code></h4>                    
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+for (let i = 1; i <= 10; i++) {
+    console.log("Número: " + i);
+}                                                    
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Perguntar ao usuário até que ele digite "sair" com <code>while</code></h4>                    
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+let entrada = prompt("Digite algo (ou 'sair' para parar):");
+
+while (entrada !== "sair") {
+    console.log("Você digitou: " + entrada);
+    entrada = prompt("Digite algo (ou 'sair' para parar):");
+}                                             
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Executando ao menos uma vez com <code>do...while</code></h4>                    
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+let valor;
+
+do {
+    valor = prompt("Digite um número maior que 10:");
+} while (valor <= 10);
+
+console.log("Número válido: " + valor);                                                                      
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Criar uma página onde:</h4>
+            <ul>
+                <li>O usuário insere um número entre 1 e 10 através do <code>prompt</code>.</li>
+                <li>Exiba no console a tabuada de multiplicação desse número de 1 a 10.</li>
+                <li>Use o laço <code>for</code> para a tabuada.</li>
+            </ul>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+            <hr>
+        </div>
+    </section>
+</body>
+
+</html>
