@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../06/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../08/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Funções em JavaScript</h1>
+            <h2>
+                Declaração, parâmetros, retorno, funções anônimas e arrow functions.
+            </h2>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivos da Aula</h3>
+            <ul>
+                <li>Compreender o conceito e a utilidade das funções em JavaScript.</li>
+                <li>Aprender a declarar funções e trabalhar com parâmetros e retorno.</li>
+                <li>Introduzir funções anônimas e arrow functions.</li>
+                <li>Mostrar a diferença entre os tipos de funções.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>O que são Funções?</h4>
+                    <p>Blocos de código reutilizáveis que executam uma tarefa específica. 
+                    Melhoram a organização, reduzem a repetição e tornam o código mais legível.</p>
+                </li>
+                <li>
+                    <h4>Declaração de Funções</h4>
+                    <ul>
+                        <li>
+                            Sintaxe básica:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+function nomeDaFuncao(parametros) {
+    // Código a ser executado
+    return resultado;
+}
+                                </code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            Exemplo:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+function saudacao(nome) {
+    return "Olá, " + nome + "!";
+}
+
+console.log(saudacao("João"));  // Saída: Olá, João!
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Funções com Parâmetros</h4>
+                    <p>Parâmetros permitem que uma função receba valores para trabalhar.</p>
+                    <ul>
+                        <li>
+                            Exemplo com cálculo:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+function somar(a, b) {
+    return a + b;
+}
+
+console.log(somar(5, 3));  // Saída: 8
+
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Funções com Retorno</h4>
+                    <p>Funções podem retornar valores usando a palavra-chave  <code>return</code>. 
+                        Após o retorno, a execução da função é encerrada.</p>
+                    <ul>
+                        <li>
+                            Exemplo:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+function verificarParidade(numero) {
+    if (numero % 2 === 0) {
+        return "Par";
+    } else {
+        return "Ímpar";
+    }
+}
+
+console.log(verificarParidade(4));  // Saída: Par
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+               
+                <li>
+                    <h4>Funções Anônimas</h4>
+                    <p>Funções sem nome, geralmente usadas em variáveis ou eventos.</p>
+                    <ul>
+                        <li>
+                            Exemplo:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+const multiplicar = function(a, b) {
+    return a * b;
+};
+
+console.log(multiplicar(3, 4));  // Saída: 12                                    
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Arrow Functions</h4>
+                    <p>Forma mais curta de declarar funções, introduzida no ES6. 
+                        Não possuem seu próprio <code>this</code> e não são adequadas para métodos de objetos.</p>
+                    <ul>
+                        <li>
+                            Sintaxe:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+const nomeDaFuncao = (parametros) => expressao;
+                                </code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            Exemplo:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+const dividir = (a, b) => a / b;
+console.log(dividir(10, 2));  // Saída: 5                                    
+                                </code></pre>
+                            </div>
+                        </li>                                 
+                    </ul>
+                </li>
+
+            </ol>
+        </div>
+    </section>   
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício Prático</h3>
+            <h4>Criar funções simples e compreender sua execução.</h4>
+            <ul>
+                <li>Criar uma Função de Saudação
+                <ol>
+                    <li>Escreva uma função chamada <code>saudacao</code> que recebe 
+                        um nome como parâmetro e retorna uma mensagem de boas-vindas.</li>
+                    <li>Exiba o resultado no console.</li>
+                </ol>
+                <li>Criar uma Função de Calculadora
+                    <ol>
+                        <li>Escreva uma função chamada calculadora que receba dois números e uma operação (+, -, *, /) como parâmetros.</li>
+                        <li>Retorne o resultado da operação ou uma mensagem de erro para operações inválidas.</li>
+                    </ol>
+                </li>
+            </ul>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+            <hr>
+        </div>
+    </section>
+</body>
+
+</html>
