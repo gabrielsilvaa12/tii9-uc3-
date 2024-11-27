@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Conversor de Minutos para Horas</h1>
+
+    <label for="minutos">Informe o total de minutos:</label>
+    <input type="number" id="minutos" placeholder="Digite os minutos">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            const minutos = document.getElementById("minutos").value;
+
+            if(minutos === "" || minutos <= 0) {
+                document.getElementById("resultado")
+                    .innerText = "Por favor, insira um número válido";
+                return;
+            }
+
+            const horas = Math.floor(minutos / 60);
+            const minutosRestantes = minutos % 60;
+
+            document.getElementById("resultado")
+                .innerText = `Total de horas: ${horas}:${minutosRestantes.toString().padStart(2, '0')}h`;
+        }
+    </script>
+</body>
+
+</html>
