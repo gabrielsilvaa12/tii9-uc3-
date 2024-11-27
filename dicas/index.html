@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Manipulação do DOM</h1>
+            <h2>
+                A manipulação do Document Object Model (DOM) é uma técnica que permite alterar o conteúdo
+                de páginas web sem que seja necessário recarregar a página.
+            </h2>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Contempla:</h3>
+            <ul>
+                <li>Selecionar e manipular elementos</li>
+                <li>Adicionar e remover elementos</li>
+                <li>Alterar estilos, textos e atributos dos elementos</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Buscando Elementos</h3>
+            <ol>
+                <li>
+                    <h4>Busca por Id</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+// buscando por id
+const element = document.querySelector('#elementId');
+
+// buscando diversos elementos por id (ignora o propósito de um identificador único)
+const elements = document.querySelectorAll('#elementId');
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Busca por classe</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+// buscar elemento pelo nome da classe
+const element = document.querySelector('.className');
+
+// buscar grupo de elementos pelo nome da classe
+const elements = document.querySelectorAll('.className');
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Exemplo 2:</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+li.remove();
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Criando Elementos</h3>
+            <ol>
+                <li>
+                    <h4>Síntaxe</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+const element = document.createElement('element');
+parentElement.appendChild(element);
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Exemplo 1:</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+const div = document.createElement('div');
+body.appendChild(div);
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Exemplo 2:</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+const ul = document.createElement('ul');
+const li = document.createElement('li');
+ul.appendChild(li);
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Removendo Elementos</h3>
+            <ol>
+                <li>
+                    <h4>Síntaxe</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+// com a função removeChild
+parent.removeChild(child);
+
+//  com a função remove
+child.remove();
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Exemplo 1:</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+ul.removeChild(li);
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Exemplo 2:</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+li.remove();
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Modificando Elementos</h3>
+            <ol>
+                <li>
+                    <h4>Modificando o estilo</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+element.style.fontSize = "18px";
+element.style.backgroundColor = "#ffffff";
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Modificando o Id</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+element.id = "myId";
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Modificando a classe</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+element.classList.add('myClass');
+element.classList.remove('myClass');
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Modificando o texto</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+element.innerText = "Hello World";
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Modificando o atributo como um todo</h4>
+                    <div class="code-block">
+                        <div class="code-block-title">JavaScript</div>
+                        <pre><code>
+// Síntaxe
+element.setAttribute(attribute, value);
+element.removeAttribute(attribute);
+
+// Examplo
+input.setAttribute('name', 'myInput');
+input.removeAttribute('name');
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+</body>
+
+</html>

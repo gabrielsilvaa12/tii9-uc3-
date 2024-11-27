@@ -15,6 +15,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
+h1 {
+    border-left: 4px solid  rgb(74, 16, 129);
+    font-size: 1.7em;
+    padding-left: 10px;
+    background-color: rgb(240, 220, 253);
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
 code {
     font-family: monospace;
     font-size: 1.2em;
@@ -26,10 +37,10 @@ code {
    LISTAS E ITENS DE LISTA
 ============================= */
 ul, ol {
-    margin: 0 0 30px 15px;
+    margin: 10px 0 30px 15px;
 }
 
-li {
+li, p {
     margin-bottom: 10px;
 }
 
@@ -80,6 +91,13 @@ header {
     display: flex;
     gap: 20px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
 }
 
 /* =============================
