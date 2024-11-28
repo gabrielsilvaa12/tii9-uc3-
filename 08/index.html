@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../07/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../09/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Eventos em JavaScript</h1>
+            <h2>
+                Tópico: onclick, onmouseover, onkeydown, e manipulação de eventos no DOM.
+            </h2>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivos da Aula</h3>
+            <ul>
+                <li>Entender como capturar e manipular eventos em elementos HTML utilizando JavaScript.</li>
+                <li>Conhecer os principais eventos: <code>onclick</code>, <code>onmouseover</code>, <code>onkeydown</code>.</li>
+                <li>Aprender a criar interações dinâmicas com elementos na página.</li>                
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>O que são Eventos?</h4>
+                    <ul>
+                        <li>Eventos permitem que o JavaScript reaja às interações do usuário ou a alterações no DOM.</li>
+                        <li>Exemplo de eventos comuns:
+                            <ul>
+                                <li><code>onclick</code>: Ocorre quando o elemento é clicado.</li>
+                                <li><code>onmouseover</code>: Ocorre quando o mouse passa sobre o elemento.</li>
+                                <li><code>onkeydown</code>: Ocorre quando uma tecla é pressionada.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Trabalhando com Eventos</h4>
+                    <ul>
+                        <li>
+                            Adicionando Eventos Inline
+                            <ul>
+                                <li>Diretamente no HTML.</li>
+                                <li>Exemplo:
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+&ltbutton onclick="alert('Botão clicado!')">Clique Aqui&lt/button>
+                                        </code></pre>
+                                    </div>
+                                </li>
+                            </ul>                            
+                        </li> 
+                        
+                        <li>
+                            Adicionando Eventos pelo JavaScript
+                            <ul>
+                                <li>Exemplo com addEventListener:                                    
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+const button = document.getElementById("meuBotao");
+button.addEventListener("click", () => {
+    alert("Botão clicado!");
+});                                            
+                                        </code></pre>
+                                    </div>
+                                </li>
+                            </ul>                            
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Tipos de Eventos</h4>
+                    <ul>
+                        <li>
+                            Evento onclick
+                            <ul>
+                                <li>Ação: Quando o usuário clica em um elemento.</li>
+                                <li>Exemplo:
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+&ltbutton onclick="exibirMensagem()">Clique&lt/button>
+&ltscript>
+    function exibirMensagem() {
+        alert("Você clicou no botão!");
+    }
+&lt/script>
+                                        </code></pre>
+                                    </div>
+                                </li>
+                            </ul>                            
+                        </li> 
+                        
+                        <li>
+                            Evento onmouseover
+                            <ul>
+                                <li>Ação: Quando o mouse passa sobre um elemento.                                    
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+&ltp onmouseover="mudarTexto(this)">Passe o mouse aqui&lt/p>
+&ltscript>
+    function mudarTexto(elemento) {
+        elemento.innerText = "Você passou o mouse!";
+    }
+&lt/script>                                                                                       
+                                        </code></pre>
+                                    </div>
+                                </li>
+                            </ul>                            
+                        </li>
+                        
+                        <li>
+                            Evento onkeydown
+                            <ul>
+                                <li>Ação: Quando uma tecla é pressionada.                                    
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+&ltinput type="text" onkeydown="mostrarTecla(event)">
+&ltscript>
+    function mostrarTecla(evento) {
+        console.log("Tecla pressionada:", evento.key);
+    }
+&lt/script>
+                                                                                                                                 
+                                        </code></pre>
+                                    </div>
+                                </li>
+                            </ul>                            
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ol>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício 1: Alterar a cor de um botão</h3>
+            <h4>Objetivo: Mudar a cor do botão quando o mouse passar sobre ele.</h4>
+            <hr><br>
+            <h3>Exercício 2: Mostrar a tecla pressionada</h3>
+            <h4>Objetivo: Exibir no console qual tecla foi pressionada.</h4>
+            <hr><br>
+            <h3>Exercício 3: Contador de Cliques</h3>
+            <h4>Objetivo: Contar quantas vezes um botão foi clicado.</h4>
+            <hr><br>
+            <h3>Exercício 4: Alterar texto ao clicar</h3>
+            <h4>Objetivo: Alterar o texto de um parágrafo ao clicar nele.</h4>
+            <hr><br>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+        </div>
+    </section>
+</body>
+
+</html>
