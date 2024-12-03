@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputTextos">
+    <p id="teclaPressionada"></p>
+
+    <script>
+        let elemento = document.getElementById("inputTextos");
+        
+        elemento.onkeydown = function(evento) {
+            document.getElementById("teclaPressionada")
+                .innerText = "Tecla: " + evento.key;
+        }
+    </script>
+</body>
+</html>
