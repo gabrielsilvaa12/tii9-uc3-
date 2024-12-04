@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: large;
+            height: 100px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnMudaCor">Mude Minha Cor</button>
+
+    <script>
+
+        function gerarCorAleatoria() {
+            const r = Math.random() * 256;
+            const g = Math.random() * 256;
+            const b = Math.random() * 256;
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+       
+        // document.getElementById("btnMudaCor").onclick = function() {
+        //     this.style.background = gerarCorAleatoria();
+        // }
+
+        const btnMudaCor = document.getElementById("btnMudaCor");
+
+        document.getElementById("btnMudaCor").addEventListener("click", () =>{
+            btnMudaCor.style.background = gerarCorAleatoria();
+        });
+
+    </script>
+</body>
+</html>
