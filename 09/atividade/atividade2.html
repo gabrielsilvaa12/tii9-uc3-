@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Um parágrafo</p>
+    <button>Um botão</button>
+
+    <script>
+        const botao = document.querySelector("button");
+
+        botao.onclick = () => {
+            document.querySelector("p").innerText = "Mudei o texto";
+
+            document.querySelector("title").remove();
+
+            document.querySelector("body").append(document.createElement("hr"));
+            //document.body.append(document.createElement("hr"));
+        }
+    </script>
+</body>
+</html>
