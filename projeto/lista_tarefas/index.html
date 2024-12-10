@@ -1,42 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <input type="text">
-    <button>+</button>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <input type="text" placeholder="Digite uma nova tarefa..." id="tarefaInput">
+        <button id="addBtn">Adicionar</button>
 
-    <ul>
-        <li>Atividade 1
-            <input type="checkbox">
-            <button><strong>🗑</strong></button>
-        </li>
-        <li>Atividade 1
-            <input type="checkbox">
-            <button><strong>🗑</strong></button>
-        </li>
-        <li>Atividade 1
-            <input type="checkbox">
-            <button><strong>🗑</strong></button>
-        </li>
-        <li>Atividade 1
-            <input type="checkbox">
-            <button><strong>🗑</strong></button>
-        </li>
-    </ul>
+        <ul id="listaDeTarefas">
+            <!--Tarefas adicionadas dinamicamente pelo JS-->
+            <!-- <li>
+                <span>
+                    Texto Da Tarefa
+                </span>
+            </li> -->
+        </ul>
+    </div>
 
-    <script>
-        let cont = 0;
-        document.querySelector("button").onclick = () => {
-            const chk = document.createElement("input");
-            chk.type = "checkbox";
-            chk.checked = cont % 2 == 0? true : false;
-            document.body.append(chk);
-            cont++;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
