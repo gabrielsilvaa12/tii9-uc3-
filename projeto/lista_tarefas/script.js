@@ -3,8 +3,9 @@ const addBtn = document.getElementById("addBtn");
 const listaDeTarefas = document.getElementById("listaDeTarefas");
 
 addBtn.addEventListener("click", () => {
-    if(tarefaInput.value) {
-        criarTarefa(tarefaInput.value);
+    let valorDoInput = tarefaInput.value;
+    if (valorDoInput) {
+        criarTarefa(valorDoInput);
         tarefaInput.value = "";
         tarefaInput.focus();
     } else {
@@ -25,22 +26,31 @@ function criarTarefa(titulo) {
     checkbox.type = "checkbox";
 
     checkbox.addEventListener("change", () => {
-        // li.classList.toggle("completed", checkbox.checked)
 
-        // if(checkbox.checked) {
-        //     li.className = "completed";
-        // } else {
-        //     li.className = "";
-        // }
-
-        if(checkbox.checked) {
+        if (checkbox.checked) {
             li.classList.add("completed");
         } else {
             li.classList.remove("completed");
         }
     })
 
-    li.append(checkbox);
-    li.append(textoDaTarefa);
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "<strong>🗑</strong>"
+    removeBtn.addEventListener("click", () => {
+        listaDeTarefas.removeChild(li);
+    });
+
+    const divFlexLi = document.createElement("div");
+    divFlexLi.append(checkbox);
+    divFlexLi.append(textoDaTarefa);
+
+    li.append(divFlexLi);
+    li.append(removeBtn);
     listaDeTarefas.append(li);
 }
+
+tarefaInput.addEventListener("keydown", (event) => {
+    if(event.key === "Enter") {
+        addBtn.click();
+    }
+})
