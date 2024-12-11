@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .melhoraTexto {
+            font-family: Arial;
+            color: brown;
+            text-decoration: dashed;
+        }
+
+        .posicionaTexto {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="posicionaTexto">Texto de exemplo</p>
+
+    <script>
+        // Alterando o texto de um elemento
+        let elemento = document.querySelector("p");
+
+        elemento.textContent = "Novo Texto";
+        elemento.innerText = "<b>Esse não é o mesmo texto</b>";
+        elemento.innerHTML = "<b>Esse não é o mesmo texto</b>";
+
+        // Alterando atributos
+        elemento.setAttribute("onmouseover", "melhoraTexto");
+        elemento.classList.remove("posicionaTexto");
+        elemento.classList.add("melhoraTexto");
+
+        // Alterar estilos diretamente
+        elemento.style.border = "1px solid blue";
+    </script>
+</body>
+</html>
