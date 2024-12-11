@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Criando um novo elemento
+        let novoElemento = document.createElement("div");
+        let paragrafo = document.createElement("p");
+        paragrafo.innerText = "Bom dia";
+
+        novoElemento.appendChild(paragrafo);
+        document.body.appendChild(novoElemento);
+
+        // Removendo um elemento
+        novoElemento.removeChild(paragrafo);
+        document.body.removeChild(novoElemento);
+    </script>
+</body>
+</html>
