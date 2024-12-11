@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textoBonito {
+            font-family: Impact;
+            color: blueviolet;
+            text-decoration: wavy;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="textoBonito">Título Grandão</h1>
+
+    <h3>Subtítulo da página</h3>
+
+    <p class="textoBonito">Texto explicativo vai aqui</p>
+    <p id="idDoElemento" class="textoBonito">Outro Texto</p>
+    <footer>
+        <h3>Textinho de footer</h3>
+    </footer>
+    <button id="mudaCor">Mudar Cor dos Textos Bonitos</button>
+
+    <ul>
+        <li>Um item da lista está aqui</li>
+        <li>Um item da lista está aqui</li>
+        <li>Um item da lista está aqui</li>
+        <li>Um item da lista está aqui</li>
+    </ul>
+
+    <script>
+        // Selecionando elemento por id
+        let elemento = document.getElementById("idDoElemento");
+        console.log(elemento);
+
+        // Selecionar elemento por classe
+        let elementos = document.getElementsByClassName("textoBonito");
+        for(let elmn of elementos) {
+            elmn.style.color = "red";
+        }
+
+        // Selecionar elementos por tag
+        let elementosDeLista = document.getElementsByTagName("li");
+        for(let elementoLi of elementosDeLista) {
+            elementoLi.style.display = "none";
+        }
+
+        // Selecionar elementos com querySelectorAll
+        let todosOsH3 = document.querySelectorAll("h3");
+        for(let umDosH3 of todosOsH3) {
+            umDosH3.style.color = "blue";
+        }
+        
+    </script>
+</body>
+</html>
