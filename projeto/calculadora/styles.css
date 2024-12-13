@@ -41,7 +41,7 @@ h1 {
     font-size: 2.0rem;
     text-align: right;
     padding: 0 0;
-    border: 2px solid #ddd;
+    border: 4px solid #ddd;
     border-style: inset;
     background: #b2d3b6;
     pointer-events: none;

@@ -1,5 +1,5 @@
 const display = document.getElementById("display");
-const buttons = document.querySelectorAll(".btn");
+let buttons = document.querySelectorAll(".btn");
 const clearButton = document.getElementById("clear");
 const equalsButton = document.getElementById("equals");
 
