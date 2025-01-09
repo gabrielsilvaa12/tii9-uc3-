@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../09/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../11/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Selecionando Elementos no DOM</h1>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivos da Aula</h3>
+            <p>
+            <ul>
+                <li>Entender como selecionar elementos no DOM utilizando métodos JavaScript.</li>
+                <li>Diferenças entre métodos como getElementById, querySelector, e outros.</li>
+            </ul>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>Selecionando um elemento pelo ID</h4>
+                    <ul>
+                        <li>Exemplo de Referência:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let element = document.getElementById("myId");
+console.log(element);
+                                    
+                                </code></pre>
+                            </div>
+                        </li>
+                        <li>Exemplo Prático: Altere o texto de um elemento com <code>id="title"</code>.
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+&lth1 id="title">Texto Original&lt/h1>
+&ltscript>
+    let element = document.getElementById("title");
+    element.textContent = "Novo Texto";
+&lt/script>                                    
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <h4>Selecionando elementos por classe</h4>
+                    <ul>
+                        <li>Exemplo de Referência:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let elements = document.getElementsByClassName("myClass");
+console.log(elements);
+                                </code></pre>
+                            </div>
+                        </li>
+                        <li>Exemplo Prático: Altere o estilo de todos os elementos com a classe <code>highlight</code>.
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+&ltp class="highlight">Primeiro Parágrafo&lt/p>
+&ltp class="highlight">Segundo Parágrafo&lt/p>
+&ltscript>
+    let elements = document.getElementsByClassName("highlight");
+    for (let element of elements) {
+    element.style.color = "blue";
+    }
+&lt/script>                                                                      
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <h4>Selecionando elementos por tag</h4>
+                    <ul>
+                        <li>Exemplo de Referência:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let elements = document.getElementsByTagName("p");
+console.log(elements);                                    
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <h4>Selecionando um elemento com querySelector</h4>
+                    <ul>
+                        <li>Exemplo de Referência:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let element = document.querySelector(".myClass");
+console.log(element);
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <h4>Selecionando múltiplos elementos com querySelectorAll</h4>
+                    <ul>
+                        <li>Exemplo de Referência:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let elements = document.querySelectorAll(".myClass");
+console.log(elements);
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <hr>
+            </ol>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício</h3>
+            <h4>Manipulalção básica do DOM</h4>
+            <ol>
+                <li>Crie um botão que altera o texto de um elemento com ID específico ao ser clicado.</li>
+                <li>Altere o estilo de todos os elementos de uma classe.</li>
+                <li>Liste no console todos os elementos &ltli> de uma lista.</li>
+            </ol>
+            <hr><br>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+        </div>
+    </section>
+</body>
+
+</html>
